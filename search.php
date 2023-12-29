@@ -57,6 +57,9 @@
                               <h3>Search Result For-><strong><?php echo "$searchitem"; ?></strong> -Total Found-<?php echo "$countsearch"; ?> </h3>
                               <div class="alert alert-warning">No Result Found</div>
                               <?php } else {
+                                ?>
+                                 <h3>Search Result For-><strong><?php echo "$searchitem"; ?></strong> -Total Found- <?php echo "$countsearch"; ?></h3>
+                                <?php
                                 while ($row = mysqli_fetch_assoc($all_posts)) {
                                     $post_id = $row['post_id'];
                                     $title = $row['title'];
@@ -68,8 +71,7 @@
                                     $meta = $row['tag'];
                                     $post_date = $row['post_date'];
                                 ?>
-                                  <h3>Search Result For-><strong><?php echo "$searchitem"; ?></strong> -Total Found- <?php echo "$countsearch"; ?></h3>
-
+                                 
                                   <!-- Single Item Blog Post Start -->
                                   <div class="blog-post">
                                       <!-- Blog Banner Image -->
